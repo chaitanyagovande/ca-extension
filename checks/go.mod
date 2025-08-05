@@ -1,4 +1,4 @@
-module combined_audit
+module checks
 
 go 1.23.7
 
