@@ -49,12 +49,31 @@ func getCaExtensionArguments() []components.Argument {
 func getCaExtensionFlags() []components.Flag {
 
 	return []components.Flag{
+		components.NewStringFlag(
+			"package-manager",
+			"The name of the package manager to audit",
+		),
+		components.NewStringFlag(
+			"repository-name",
+			"The JFrog Repository Name",
+		),
+		components.NewStringFlag(
+			"lock-file",
+			"The path to the lock file to audit",
+		),
+		components.NewStringFlag(
+			"jfrog-access-token",
+			"JFrog Access Token",
+		),
+	}
+
+	/*return []components.Flag{
 		components.NewBoolFlag(
 			"shout",
 			"Makes output uppercase",
 			components.WithBoolDefaultValue(false),
 		),
-	}
+	}*/
 }
 
 func getCaExtensionEnvVar() []components.EnvVar {
